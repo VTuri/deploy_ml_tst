@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  token_predict:
+    build: ./app
+    ports:
+      - 5002:5000
+    networks:
+      - portfolio_website_default
+
+networks:
+  portfolio_website_default:
+    external: true
