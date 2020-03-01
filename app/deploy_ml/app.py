@@ -7,6 +7,10 @@ model = pkl.load(open("notebook/token_predictor_model.pkl", 'rb'))
 
 @app.route('/predict/')
 def predict():
+    """
+    example:http://0.0.0.0:8000/predict/?forecast=3
+    :return: [{"day":0,"prediction":129298.36155585825},{"day":1,"prediction":129471.13316899545},{"day":2,"prediction":129404.59708590152}]
+    """
     data = request.args.get("forecast")
     data = int(data)
 
