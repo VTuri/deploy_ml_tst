@@ -21,7 +21,7 @@ def predict():
     output_json = []
     for i in range(len(output)):
         pred_dict = {}
-        pred_dict = {"day": i,"prediction":output[i]}
+        pred_dict = {"day": i+1,"prediction":output[i]}
         output_json.append(pred_dict)
     return jsonify(output_json)
 
